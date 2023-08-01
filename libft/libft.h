@@ -6,7 +6,7 @@
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 13:04:25 by jovieira          #+#    #+#             */
-/*   Updated: 2023/07/10 22:03:53 by jovieira         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:24:53 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdbool.h>
 
 int		ft_atoi(const char *str);
-// int		ft_atoi_error(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
@@ -63,15 +62,20 @@ char	**ft_split(char const *s, char c);
 typedef struct t_list
 {
 	int				content;
+	int				index;
 	struct t_list	*next;
 }					t_list;
 
 t_list	*ft_lstnew(int content);
-int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstdbnext(t_list *lst);
+int		ft_lstsize(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstdelone(t_list *lst);
-void	ft_lstclear(t_list **lst);
+t_list	*ft_lst_pos(t_list **stack, int size);
+void	ft_lstdelone_mod(t_list *lst);
+void	ft_lstclear_mod(t_list **lst);
+// void	ft_lstclear(t_list **lst);
+// void	ft_lstdelone(t_list *lst);
 // void	ft_lstadd_front(t_list **lst, t_list *new);
 // void	ft_lstiter(t_list *lst, void (*f)(int));
 // t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*));

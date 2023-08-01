@@ -6,7 +6,7 @@
 #    By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/17 12:29:25 by jovieira          #+#    #+#              #
-#    Updated: 2023/07/10 22:04:29 by jovieira         ###   ########.fr        #
+#    Updated: 2023/07/17 14:51:52 by jovieira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,8 @@ BONUS_SRC=	ft_lstnew_bonus.c\
 			ft_lstclear_bonus.c\
 			ft_lstlast_bonus.c\
 			ft_lstsize_bonus.c\
+			ft_lstdbnext.c\
+			ft_lst_pos.c\
 # ft_lstiter_bonus.c\
 # ft_lstmap_bonus.c\
 # ft_lstadd_front_bonus.c\
@@ -75,7 +77,7 @@ else
 OBJ = $(addprefix $(OBJ_DIR)/,$(OBJ_REG))
 endif
 
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -g
 HEADER	:= libft.h
 
 all: $(NAME)

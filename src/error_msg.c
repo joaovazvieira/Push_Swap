@@ -6,13 +6,19 @@
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 17:35:18 by jovieira          #+#    #+#             */
-/*   Updated: 2023/07/10 21:36:06 by jovieira         ###   ########.fr       */
+/*   Updated: 2023/08/01 17:30:21 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-static void	free_array(char **array)
+void	input_check(int argc)
+{
+	if (argc < 3)
+		exit(write(2, "ERROR\nGive at least two argumment\n", 35));
+}
+
+void	free_array(char **array)
 {
 	int	i;
 
@@ -23,18 +29,18 @@ static void	free_array(char **array)
 		free(array);
 }
 
-int	msg(int	i, char **temp, t_list *input)
+void	free_list(t_list **stack)
 {
-	(void) temp;
-	(void) input;
+	ft_lstclear_mod(stack);
+	if (stack)
+		free(stack);
+}
+
+int	msg(int i, char **input)
+{
+	if (input != NULL)
+		free_array(input);
 	if (i == 1)
-	{
-		ft_lstclear(&input);
-		free_array(temp);
-		exit(write(2, "This is the kenny virus\n", 25));
-		
-	}
-		// write(2, "Wrong number imput\n", 20);
-	// exit(1);
+		exit(write(2, "ERROR\nSome arguments arent integers\n", 37));
 	return (0);
 }

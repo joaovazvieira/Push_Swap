@@ -6,7 +6,7 @@
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:38:26 by jovieira          #+#    #+#             */
-/*   Updated: 2022/11/25 16:01:07 by jovieira         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:19:44 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			{
 				if (needle[j + 1] == '\0')
 					return ((char *)haystack + i);
-			j++;
+				j++;
 			}
 		}
-	i++;
+		i++;
 	}
 	return (NULL);
 }

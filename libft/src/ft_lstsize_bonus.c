@@ -6,7 +6,7 @@
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 21:02:25 by jovieira          #+#    #+#             */
-/*   Updated: 2023/07/10 19:40:20 by jovieira         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:18:28 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_lstsize(t_list *lst)
 
 	count = 0;
 	while (lst)
-	{	
+	{
 		lst = lst->next;
 		count++;
 	}

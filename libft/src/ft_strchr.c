@@ -6,7 +6,7 @@
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:19:02 by jovieira          #+#    #+#             */
-/*   Updated: 2022/10/31 14:44:30 by jovieira         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:19:24 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strchr(const char *s, int c)
 		if (*str == '\0')
 			return (NULL);
 		str++;
-	}	
+	}
 	return (str);
 }

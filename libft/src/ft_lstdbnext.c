@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_lstdbnext.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 22:01:09 by jovieira          #+#    #+#             */
-/*   Updated: 2023/07/20 15:25:20 by jovieira         ###   ########.fr       */
+/*   Created: 2023/07/11 19:16:13 by jovieira          #+#    #+#             */
+/*   Updated: 2023/07/11 19:17:05 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// void	ft_lstdelone(t_list *lst)
-// {
-// 	if (!lst)
-// 		return ;
-// 	free(lst->content);
-// 	free(lst);
-// }
-
-void	ft_lstdelone_mod(t_list *lst)
+t_list	*ft_lstdbnext(t_list *lst)
 {
-	if (!lst)
-		return ;
-	free(lst);
+	while (lst != NULL && lst->next->next)
+		lst = lst->next;
+	return (lst);
 }

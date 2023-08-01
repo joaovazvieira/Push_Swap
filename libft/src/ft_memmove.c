@@ -6,7 +6,7 @@
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:41:00 by jovieira          #+#    #+#             */
-/*   Updated: 2022/11/02 21:00:03 by jovieira         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:19:02 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (d > s)
 	{
 		while (len-- > 0)
-				d[len] = s[len];
-	}			
+			d[len] = s[len];
+	}
 	else
 	{
 		while (i < len)
@@ -35,6 +35,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			d[i] = s[i];
 			i++;
 		}
-	}	
+	}
 	return (dst);
 }

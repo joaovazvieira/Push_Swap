@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_lst_pos.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 22:01:09 by jovieira          #+#    #+#             */
-/*   Updated: 2023/07/20 15:25:20 by jovieira         ###   ########.fr       */
+/*   Created: 2023/07/17 13:21:06 by jovieira          #+#    #+#             */
+/*   Updated: 2023/07/20 15:16:29 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-// void	ft_lstdelone(t_list *lst)
-// {
-// 	if (!lst)
-// 		return ;
-// 	free(lst->content);
-// 	free(lst);
-// }
-
-void	ft_lstdelone_mod(t_list *lst)
+t_list	*ft_lst_pos(t_list **stack, int size)
 {
-	if (!lst)
-		return ;
-	free(lst);
+	int		i;
+	t_list	*temp;
+
+	i = 0;
+	temp = *stack;
+	while (i < size - 1)
+	{
+		i++;
+		temp = temp->next;
+	}
+	return (temp);
 }

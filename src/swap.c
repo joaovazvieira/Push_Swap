@@ -6,25 +6,26 @@
 /*   By: jovieira <jovieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 06:37:12 by jovieira          #+#    #+#             */
-/*   Updated: 2023/07/07 14:08:28 by jovieira         ###   ########.fr       */
+/*   Updated: 2023/07/19 19:47:34 by jovieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-// void	swap(int *stack, int size)
-// {
-// 	int temp;
+void	swap(t_list **stack)
+{
+	t_list	*temp_l;
 
-// 	if (size < 2)
-// 		return ;
-// 	temp = stack[0];
-// 	stack[0] = stack[1];
-// 	stack[1] = temp;
-// }
+	temp_l = (*stack)->next;
+	(*stack)->next = temp_l->next;
+	temp_l->next = (*stack);
+	(*stack) = temp_l;
+	write(1, "sa\n", 3);
+}
 
-// void	multy_swap(int *stack_a, int *stack_b, int size_a, int size_b)
+// void	ss(t_list **stack_a, t_list **stack_b)
 // {
-// 	swap(stack_a, size_a);
-// 	swap(stack_b, size_b);
+// 	swap(stack_a);
+// 	swap(stack_b);
+// 	write(1, "ss\n", 3);
 // }
